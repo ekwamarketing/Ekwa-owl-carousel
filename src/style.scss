@@ -4,9 +4,20 @@
 .ekwa-owl-prev,
 .ekwa-owl-next{
     cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: 0;
 }
 .owl-nav{
     display: none;
+}
+.ekwa-carousel-wrapper .offscreen{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 .ekwa-carousel-wrapper{
     padding-left: 40px;

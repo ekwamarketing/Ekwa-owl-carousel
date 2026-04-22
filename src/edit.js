@@ -233,11 +233,15 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 
 
 		{prevBtnSvg
-        ? <span className={`ekwa-${blockID}-prev ekwa-owl-prev`} dangerouslySetInnerHTML={{ __html: prevBtnSvg }}></span>
+        ? <button type="button" role="presentation" className={`ekwa-${blockID}-prev ekwa-owl-prev`}>
+            <span aria-label="Previous" dangerouslySetInnerHTML={{ __html: prevBtnSvg }}></span>
+          </button>
         : null
       	}
 		{nextBtnSvg
-		 ? <span className={`ekwa-${blockID}-next ekwa-owl-next`} dangerouslySetInnerHTML={{ __html: nextBtnSvg }}></span>
+		 ? <button type="button" role="presentation" className={`ekwa-${blockID}-next ekwa-owl-next`}>
+		     <span aria-label="Next" dangerouslySetInnerHTML={{ __html: nextBtnSvg }}></span>
+		   </button>
 		 : null
 		}
 	</div>

@@ -72,33 +72,37 @@ if ( $enable_custom_js && ! empty( $custom_js_code ) ) {
 	</div>
 
 	<?php if ( $nav && ! empty( $prev_btn_svg ) ) : ?>
-		<span class="ekwa-<?php echo esc_attr( $block_id ); ?>-prev ekwa-owl-prev">
-			<?php
-			// Allow SVG tags for navigation icons
-			$allowed_svg = array(
-				'svg' => array(
-					'xmlns' => true,
-					'height' => true,
-					'viewbox' => true,
-					'width' => true,
-					'fill' => true,
-					'class' => true,
-				),
-				'path' => array(
-					'd' => true,
-					'fill' => true,
-					'stroke' => true,
-					'stroke-width' => true,
-				),
-			);
-			echo wp_kses( $prev_btn_svg, $allowed_svg );
-			?>
-		</span>
+		<button type="button" role="presentation" class="ekwa-<?php echo esc_attr( $block_id ); ?>-prev ekwa-owl-prev">
+			<span aria-label="Previous">
+				<?php
+				// Allow SVG tags for navigation icons
+				$allowed_svg = array(
+					'svg' => array(
+						'xmlns' => true,
+						'height' => true,
+						'viewbox' => true,
+						'width' => true,
+						'fill' => true,
+						'class' => true,
+					),
+					'path' => array(
+						'd' => true,
+						'fill' => true,
+						'stroke' => true,
+						'stroke-width' => true,
+					),
+				);
+				echo wp_kses( $prev_btn_svg, $allowed_svg );
+				?>
+			</span>
+		</button>
 	<?php endif; ?>
 
 	<?php if ( $nav && ! empty( $next_btn_svg ) ) : ?>
-		<span class="ekwa-<?php echo esc_attr( $block_id ); ?>-next ekwa-owl-next">
-			<?php echo wp_kses( $next_btn_svg, $allowed_svg ); ?>
-		</span>
+		<button type="button" role="presentation" class="ekwa-<?php echo esc_attr( $block_id ); ?>-next ekwa-owl-next">
+			<span aria-label="Next">
+				<?php echo wp_kses( $next_btn_svg, $allowed_svg ); ?>
+			</span>
+		</button>
 	<?php endif; ?>
 </div>
