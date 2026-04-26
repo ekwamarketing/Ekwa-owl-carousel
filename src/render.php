@@ -72,8 +72,8 @@ if ( $enable_custom_js && ! empty( $custom_js_code ) ) {
 	</div>
 
 	<?php if ( $nav && ! empty( $prev_btn_svg ) ) : ?>
-		<button type="button" role="presentation" class="ekwa-<?php echo esc_attr( $block_id ); ?>-prev ekwa-owl-prev">
-			<span aria-label="Previous">
+		<button type="button" aria-label="Previous slide" class="ekwa-<?php echo esc_attr( $block_id ); ?>-prev ekwa-owl-prev">
+			<span aria-hidden="true">
 				<?php
 				// Allow SVG tags for navigation icons
 				$allowed_svg = array(
@@ -99,8 +99,8 @@ if ( $enable_custom_js && ! empty( $custom_js_code ) ) {
 	<?php endif; ?>
 
 	<?php if ( $nav && ! empty( $next_btn_svg ) ) : ?>
-		<button type="button" role="presentation" class="ekwa-<?php echo esc_attr( $block_id ); ?>-next ekwa-owl-next">
-			<span aria-label="Next">
+		<button type="button" aria-label="Next slide" class="ekwa-<?php echo esc_attr( $block_id ); ?>-next ekwa-owl-next">
+			<span aria-hidden="true">
 				<?php echo wp_kses( $next_btn_svg, $allowed_svg ); ?>
 			</span>
 		</button>
